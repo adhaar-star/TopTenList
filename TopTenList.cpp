@@ -27,9 +27,9 @@ return _list[index-1];
 void TopTenList::display_forward(){
     for(vector<Hyperlink>::iterator it = _list.begin();it!=_list.end();++it){
  
-         cout<<it - _list.begin()+1<<" of "<<_list.size()<<" "
-             <<it->text<<" "
-             <<it->url<<std::endl;
+         cout<< it - _list.begin()+1 << ".  " <<
+            "<a href=" << it->url<<
+             it->text<< "</a>"<<std::endl;
   
 }
 }
@@ -38,9 +38,9 @@ void TopTenList::display_forward(){
 void TopTenList::display_backward(){
     for(vector<Hyperlink>::reverse_iterator it = _list.rbegin();it!=_list.rend();++it){
          
-           cout<< it - _list.rbegin()+1<<" of "<<_list.size()<<" "
-             <<it->text<<" "
-             <<it->url<<std::endl;
+             cout<< it - _list.rbegin()+1 << ".  " <<
+            "<a href=" << it->url<<
+             it->text<< "</a>"<<std::endl;
     
     }
 }
