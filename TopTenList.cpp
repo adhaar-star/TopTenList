@@ -38,7 +38,7 @@ void TopTenList::display_forward(){
 void TopTenList::display_backward(){
     for(vector<Hyperlink>::reverse_iterator it = _list.rbegin();it!=_list.rend();++it){
          
-             cout<< it - _list.rbegin()+1 << ".  " <<
+             cout << _list.size() - (it - _list.rbegin()) << ".  " <<
             "<a href=" << it->url<<
              it->text<< "</a>"<<std::endl;
     
